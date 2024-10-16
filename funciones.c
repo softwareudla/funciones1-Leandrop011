@@ -77,5 +77,5 @@ void buscarProducto(char nombres[][30], float precios[], int cantidad, char nomb
             return;
         }
     }
-    printf("XX Producto no encontrado XX\n");
+    printf("\nXX Producto no encontrado XX\n");
 }
