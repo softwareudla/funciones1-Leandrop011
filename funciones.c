@@ -48,7 +48,6 @@ float calcularPrecioTotal(float precios[], int cantidad) {
 void encontrarMasCaroYBarato(char nombres[][30], float precios[], int cantidad) {
     if (cantidad == 0) {
         printf("No hay productos en el inventario.\n");
-        return;
     }
     int indiceMasCaro = 0, indiceMasBarato = 0;
     for (int i = 1; i < cantidad; i++) {
