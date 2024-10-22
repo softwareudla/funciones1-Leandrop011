@@ -76,6 +76,7 @@ void buscarProducto(char nombres[][30], float precios[], int cantidad, char nomb
     for (int i = 0; i < cantidad; i++) {
         if (strcmp(nombres[i], nombreBuscado) == 0) {
             printf("El producto %s tiene un precio de %.2f\n", nombres[i], precios[i]);
+            return;
         }
     }
 
