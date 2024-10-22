@@ -27,7 +27,7 @@ int main() {
 
         switch (opcion) {
             case 1:
-                ingresarProductos(nombres, precios, cantidad);
+                cantidad = ingresarProductos(nombres, precios, cantidad);
                 break;
             case 2:
                 printf("El precio total del inventario es: %.2f\n", calcularPrecioTotal(precios, cantidad));
