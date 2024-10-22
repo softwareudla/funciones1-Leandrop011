@@ -8,13 +8,13 @@
 int ingresarProductos(char nombres[][30], float precios[], int cantidad) {
     if (cantidad >= MAX_PRODUCTOS) {
         printf("Ya se han ingresado 10 productos. No se pueden ingresar más.\n");
-        return cantidad;  // Retorna la misma cantidad si ya se ha alcanzado el límite
+        return cantidad;  // Retorna misma cantidad si límite
     }
 
     printf("Ingrese el nombre del producto: ");
-    getchar();  // Eliminar salto de línea previo si lo hay
+    getchar();  // X salto de línea 
     fgets(nombres[cantidad], 30, stdin);
-    // Remover el salto de línea al final del nombre
+    //  el salto de línea al final
     nombres[cantidad][strcspn(nombres[cantidad], "\n")] = '\0';
 
     printf("Ingrese el precio del producto: ");
@@ -31,17 +31,17 @@ float obtenerPrecioValido() {
         resultado = scanf("%f", &precio);
         if (resultado != 1 || precio < 0) {
             printf("Entrada no válida. Ingrese un precio válido (número positivo): ");
-            while (getchar() != '\n');  // Limpiar el buffer de entrada
+            while (getchar() != '\n');  // buffer 
         }
     } while (resultado != 1 || precio < 0);
 
-    return precio;  // Devuelve el precio válido
+    return precio;  //  precio válido
 }
 
 float calcularPrecioTotal(float precios[], int cantidad) {
     float total = 0;
     for (int i = 0; i < cantidad; i++) {
-        total += precios[i];  // Suma todos los precios
+        total += precios[i];  // Suma todo 
     }
     return total;
 }
@@ -55,10 +55,10 @@ void encontrarMasCaroYBarato(char nombres[][30], float precios[], int cantidad) 
     int indiceMasCaro = 0, indiceMasBarato = 0;
     for (int i = 1; i < cantidad; i++) {
         if (precios[i] > precios[indiceMasCaro]) {
-            indiceMasCaro = i;  // Actualiza el índice del producto más caro
+            indiceMasCaro = i;  // Actualiza  más caro
         }
         if (precios[i] < precios[indiceMasBarato]) {
-            indiceMasBarato = i;  // Actualiza el índice del producto más barato
+            indiceMasBarato = i;  // Actualiza  más barato
         }
     }
 
@@ -68,9 +68,9 @@ void encontrarMasCaroYBarato(char nombres[][30], float precios[], int cantidad) 
 
 float calcularPromedio(float precios[], int cantidad) {
     if (cantidad == 0) {
-        return 0;  // Si no hay productos, el promedio es 0
+        return 0;  //no hay productos  promedio -> 0
     }
-    return calcularPrecioTotal(precios, cantidad) / cantidad;  // Retorna el promedio
+    return calcularPrecioTotal(precios, cantidad) / cantidad;  // Retorna  promedio
 }
 
 void buscarProducto(char nombres[][30], float precios[], int cantidad, char nombreBuscado[]) {
@@ -81,5 +81,5 @@ void buscarProducto(char nombres[][30], float precios[], int cantidad, char nomb
         }
     }
 
-    printf("\n XX Producto no encontrado XX\n");  // Si no se encuentra, imprime un mensaje
+    printf("\n XX Producto no encontrado XX\n");  
 }
