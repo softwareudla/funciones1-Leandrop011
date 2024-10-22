@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "funciones.h"
 #include <string.h>
-
+#include <stdlib.h>
 #define MAX_PRODUCTOS 10
 
 int main() {
@@ -19,6 +19,7 @@ int main() {
         printf("4. Calcular el precio promedio\n");
         printf("5. Buscar producto por nombre\n");
         printf("6. Salir Del Programa\n");
+        printf("7. BORRAR TODO EL HISTORIAL\n");
         printf("Ingrese una opcion:  ");
         scanf("%d", &opcion);
         printf("----------------------------------------------\n");
@@ -43,6 +44,9 @@ int main() {
                 break;
             case 6:
                 printf("Saliendo del sistema...\n");
+                break;
+            case 7:
+                system("cls");
                 break;
             default:
                 printf("Opción no válida.\n");
