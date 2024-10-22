@@ -2,6 +2,7 @@
 #include "funciones.h"
 #include <string.h>
 #include <stdlib.h>
+
 #define MAX_PRODUCTOS 10
 
 int main() {
@@ -11,8 +12,8 @@ int main() {
     char nombreBuscado[30];
 
     do {
-        printf("---------------------------------------------");
-        printf("\nSistema de  Inventario\n");
+        printf("---------------------------------------------\n");
+        printf("Sistema de Inventario\n");
         printf("1. Ingresar productos\n");
         printf("2. Calcular precio total del inventario\n");
         printf("3. Encontrar el producto mas caro y mas barato\n");
@@ -26,7 +27,7 @@ int main() {
 
         switch (opcion) {
             case 1:
-                ingresarProductos(nombres, precios, &cantidad);
+                cantidad = ingresarProductos(nombres, precios, cantidad);
                 break;
             case 2:
                 printf("El precio total del inventario es: %.2f\n", calcularPrecioTotal(precios, cantidad));
@@ -46,7 +47,9 @@ int main() {
                 printf("Saliendo del sistema...\n");
                 break;
             case 7:
-                system("cls");
+                cantidad = 0;  // Reinicia la cantidad de productos
+                system("cls"); // Limpia la consola
+                printf("Se ha borrado todo el historial.\n");
                 break;
             default:
                 printf("Opción no válida.\n");
@@ -56,4 +59,3 @@ int main() {
 
     return 0;
 }
-
