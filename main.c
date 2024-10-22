@@ -10,7 +10,6 @@ int main() {
     float precios[MAX_PRODUCTOS];
     int cantidad = 0, opcion;
     char nombreBuscado[30];
-
     do {
         printf("---------------------------------------------\n");
         printf("Sistema de Inventario\n");
@@ -47,9 +46,8 @@ int main() {
                 printf("Saliendo del sistema...\n");
                 break;
             case 7:
-                cantidad = 0;  // Reinicia la cantidad de productos
-                system("cls"); // Limpia la consola
-                printf("Se ha borrado todo el historial.\n");
+                cantidad = 0;  
+                system("cls"); 
                 break;
             default:
                 printf("Opción no válida.\n");
