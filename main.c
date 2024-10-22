@@ -12,7 +12,7 @@ int main() {
     char nombreBuscado[30];
     do {
         printf("---------------------------------------------\n");
-        printf("Sistema de Inventario\n");
+        printf("Sistema de Inventario (Max 10 productos)\n");
         printf("1. Ingresar productos\n");
         printf("2. Calcular precio total del inventario\n");
         printf("3. Encontrar el producto mas caro y mas barato\n");
