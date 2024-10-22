@@ -30,7 +30,7 @@ float obtenerPrecioValido() {
     do {
         resultado = scanf("%f", &precio);
         if (resultado != 1 || precio < 0) {
-            printf("Entrada no válida. Ingrese un precio válido (número positivo): ");
+            printf("Entrada no válida. Ingrese un precio valido (numero positivo): ");
             while (getchar() != '\n');  // buffer 
         }
     } while (resultado != 1 || precio < 0);
